@@ -5,4 +5,5 @@ Project machine learning Case study: Diabetes
 1. Slide presentation
 2. Model KNN and Decision tree
 
-![duck]([https://example.com/icon.png](https://cdn-icons-png.flaticon.com/128/9867/9867908.png))
+![duck](https://cdn-icons-png.flaticon.com/128/9867/9867908.png)
+
