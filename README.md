@@ -1,43 +1,85 @@
-# Diabetes Prediction and Model Comparison
+# 🧠 AI & Data Analytics in Supply Chain Systems — Term Project
 
-🎓 **Term Project – SE 634-1: Artificial Intelligence & Data Analytics in Supply Chain Systems**  
-📍 **Sirindhorn International Institute of Technology (SIIT)**  
-👨‍🏫 **Advisor:** Dr. Warrut Pannakkong  
+[![Shiny App](https://img.shields.io/badge/Shiny-Running-green?logo=R)](https://xikr3m-bi2f.shinyapps.io/aishiny/)
 
-## 🔍 Overview
+---
 
-This interactive Shiny application allows users to **compare the performance of three machine learning models** — Logistic Regression, Decision Tree, and K-Nearest Neighbors (KNN) — on the **Pima Indians Diabetes dataset**. The app visualizes metrics like accuracy, sensitivity, specificity, and ROC curves, and also allows users to input patient data to receive real-time diabetes predictions from the selected model.
+<div align="center">
 
-## 📊 Models Used
+<img src="https://admissions.siit.tu.ac.th/wp-content/uploads/2023/06/cropped-TU-SIIT1992-01.png" height="100"/>
 
-- **Logistic Regression**: A linear model used for binary classification.
-- **Decision Tree**: A tree-based model for decision-making.
-- **K-Nearest Neighbors (KNN)**: A non-parametric model based on feature similarity.
+## Term Project - SE 634-1: AI & Data Analytics in Supply Chain Systems  
+### Sirindhorn International Institute of Technology (SIIT)  
+### Semester 2/2024  
 
-Each model is trained using 5-fold cross-validation and evaluated on separate validation and test datasets.
+</div>
 
-## 🚀 Live Demo
+---
 
-👉 **Try the app here**: [https://xikr3m-bi2f.shinyapps.io/aishiny/](https://xikr3m-bi2f.shinyapps.io/aishiny/)
+## 📋 Project Title
 
-## 🛠 How It Works
+**Comparison of Machine Learning Models for Diabetes Prediction**  
+Using the **Pima Indians Diabetes dataset**, we built and evaluated three models to classify whether a patient has diabetes based on health parameters.
 
-- The dataset is split into:
-  - 70% training
-  - 15% validation
-  - 15% testing
-- Features are normalized for KNN.
-- Performance is evaluated using confusion matrices, ROC curves, and summary plots.
-- You can interactively:
-  - Select a model to view performance
-  - Enter custom input values and get predictions
+---
 
-## 📦 Technologies Used
+## 🧪 Models Used
 
-- **R** for data analysis and model building
-- **Shiny** for interactive web application
-- **Caret** for machine learning pipeline
-- **ggplot2** and **pROC** for visualization
+1. **Logistic Regression**
+2. **Decision Tree (CART)**
+3. **K-Nearest Neighbors (KNN)**
+
+All models were trained with cross-validation and evaluated on a held-out test set. Performance was compared based on accuracy and confusion matrix results.
+
+---
+
+## 📈 Live Shiny App
+
+🔗 [Click here to open the live Shiny app](https://xikr3m-bi2f.shinyapps.io/aishiny/)
+
+This interactive Shiny application allows users to:
+
+- View model accuracy comparisons  
+- See confusion matrices for each model  
+- Explore how each model performs on the validation and test datasets
+
+---
+
+## 📽 Presentation Slides
+
+[![Watch the Slide Presentation](https://img.icons8.com/fluency/240/google-slides.png)](https://docs.google.com/presentation/d/16jZ11q2jrd408cw8Sdvptqg1ORq0ukkUBdBD8ptAQxI/edit?usp=sharing)
+
+🔗 [Click here to view the Google Slides](https://docs.google.com/presentation/d/16jZ11q2jrd408cw8Sdvptqg1ORq0ukkUBdBD8ptAQxI/edit?usp=sharing)
+
+---
+
+## 👨‍🏫 Project Advisor
+
+<div align="center">
+<img src="https://drive.google.com/uc?export=view&id=16ebl13r_yph1SOclCfOy0EF3btFdpffO" height="160"/>
+<br/>
+<b>Dr. Warrut Pannakkong</b>  
+Sirindhorn International Institute of Technology (SIIT)  
+</div>
+
+---
+
+## 🗃 Dataset
+
+- 📦 **PimaIndiansDiabetes** from the `mlbench` R package  
+- Includes medical diagnostic measurements and diabetes outcomes for female patients of Pima Indian heritage.
+
+---
+
+## ⚙️ Technologies Used
+
+- **R** for modeling  
+- **Shiny** for web app  
+- **caret**, **rpart**, **class** for machine learning  
+- **RStudio** for development  
+- **shinyapps.io** for deployment  
+
+---
 
 ## 🧪 Sample Input for Prediction
 
@@ -52,10 +94,13 @@ Each model is trained using 5-fold cross-validation and evaluated on separate va
 | Diabetes Pedigree    | 0.45    |
 | Age                  | 33      |
 
+---
+
 ## 📁 File Structure
 
 ```bash
 .
 ├── app.R              # Main Shiny app script
 ├── README.md          # This file
-└── (Optional data or helper files if needed)
+
+
