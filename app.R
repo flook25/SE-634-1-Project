@@ -96,6 +96,9 @@ ui <- fluidPage(
       tabsetPanel(
         tabPanel("Prediction",
                  uiOutput("prediction_output"),
+                 radioButtons("roc_set", "ROC Curve Dataset:", 
+                              choices = c("Validation", "Test"), 
+                              selected = "Validation", inline = TRUE),
                  plotOutput("roc_plot")
         ),
         tabPanel("Model Performance",
@@ -213,14 +216,23 @@ server <- function(input, output, session) {
     })
   })
   
-  # ROC plot (validation set only for simplicity)
+  # ROC plot (toggle between validation and test set)
   output$roc_plot <- renderPlot({
-    actual_numeric <- ifelse(val_df$diabetes == "pos", 1, 0)
-    roc_logit <- roc(actual_numeric, logit_probs_val$pos)
-    roc_tree <- roc(actual_numeric, tree_probs_val$pos)
-    roc_knn <- roc(actual_numeric, knn_probs_val$pos)
-    
-    plot(roc_logit, col = "blue", legacy.axes = TRUE, main = "ROC Curves for Validation Set")
+    roc_set <- input$roc_set
+    if (roc_set == "Validation") {
+      actual_numeric <- ifelse(val_df$diabetes == "pos", 1, 0)
+      roc_logit <- roc(actual_numeric, logit_probs_val$pos)
+      roc_tree <- roc(actual_numeric, tree_probs_val$pos)
+      roc_knn <- roc(actual_numeric, knn_probs_val$pos)
+      main_title <- "ROC Curves for Validation Set"
+    } else {
+      actual_numeric <- ifelse(test_df$diabetes == "pos", 1, 0)
+      roc_logit <- roc(actual_numeric, logit_probs_test$pos)
+      roc_tree <- roc(actual_numeric, tree_probs_test$pos)
+      roc_knn <- roc(actual_numeric, knn_probs_test$pos)
+      main_title <- "ROC Curves for Test Set"
+    }
+    plot(roc_logit, col = "blue", legacy.axes = TRUE, main = main_title)
     lines(roc_tree, col = "green")
     lines(roc_knn, col = "red")
     legend("bottomright", legend = c(
