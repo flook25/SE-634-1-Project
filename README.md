@@ -35,7 +35,7 @@ All models were trained with cross-validation and evaluated on a held-out test s
 
 ## 📈 Live Shiny App
 
-🔗 [Click here to open the live Shiny app](https://xikr3m-bi2f.shinyapps.io/aishiny/)
+🔗 [Click here to open the live Shiny app](https://xikr3m-bi2f.shinyapps.io/appnew/)
 
 This interactive Shiny application allows users to:
 
