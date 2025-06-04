@@ -47,9 +47,9 @@ This interactive Shiny application allows users to:
 
 ## 📽 Presentation Slides
 
-[![Watch the Slide Presentation](https://img.icons8.com/fluency/240/google-slides.png)](https://docs.google.com/presentation/d/16jZ11q2jrd408cw8Sdvptqg1ORq0ukkUBdBD8ptAQxI/edit?usp=sharing)
+[![Watch the Slide Presentation](https://img.icons8.com/fluency/240/google-slides.png)](https://docs.google.com/presentation/d/1CVNz_oO8mTWUG5y83-FmOx8AdnsXsKkR6b8dLRw_U4U/edit?usp=sharing)
 
-🔗 [Click here to view the Google Slides](https://docs.google.com/presentation/d/16jZ11q2jrd408cw8Sdvptqg1ORq0ukkUBdBD8ptAQxI/edit?usp=sharing)
+🔗 [Click here to view the Google Slides](https://docs.google.com/presentation/d/1CVNz_oO8mTWUG5y83-FmOx8AdnsXsKkR6b8dLRw_U4U/edit?usp=sharing)
 
 ---
 
